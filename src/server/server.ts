@@ -24,7 +24,7 @@ export function createServer(opts: ServerOptions) {
   });
 
   server.get('/', async () => {
-    return { hello: 'wait-on 💨', res: MU.ma([1, 2, 3, 4, 5, 6], 1) };
+    return { hello: 'wait-on 💨', ma: MU.ma([1, 2, 3, 4, 5, 6], 1) };
   });
 
   const stop = () => server.close();
